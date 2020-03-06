@@ -297,7 +297,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &113949737
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &135106100
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -584,7 +584,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &205111548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -788,8 +788,6 @@ MonoBehaviour:
   timer: {fileID: 881319405}
   points: 0
   name: 
-  pointList: 
-  nameList: []
   question: {fileID: 1438940284}
 --- !u!4 &306407642
 Transform:
@@ -1343,7 +1341,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &522678239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1770,7 +1768,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &624786433
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1926,7 +1924,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &670867816
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2466,7 +2464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &953335684
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2832,7 +2830,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 306407641}
-        m_MethodName: Save
+        m_MethodName: ReturnMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4734,7 +4732,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &1766362477
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4996,7 +4994,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &1862666208
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5505,7 +5503,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasdasd
+  m_Text: 
 --- !u!222 &2134933987
 CanvasRenderer:
   m_ObjectHideFlags: 0

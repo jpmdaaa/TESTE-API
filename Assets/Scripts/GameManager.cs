@@ -13,6 +13,8 @@ public class PlayerData
 {
     public int[] points;
     public string[] name;
+  
+ 
 }
 
 public class GameManager : MonoBehaviour
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
     public Text[] NamesTXT;
     public Text[] ResultsTXT;
     public InputField inputField;
-
+ 
 
     [Space(20)]
     public Timer timer;
@@ -34,8 +36,8 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     public int points;
     public string name;
-    public List<int>pointList;
-    public List<string> nameList;
+    //public List<int>pointList;
+    //public List<string> nameList;
 
 
 
@@ -70,6 +72,7 @@ public class GameManager : MonoBehaviour
 
 
     }
+    
 
 
     public void FinishGame()
@@ -83,42 +86,30 @@ public class GameManager : MonoBehaviour
 
     public void Save()
     {
-
+       
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(filePath);
         PlayerData data = new PlayerData();
 
-      
-
         data.points = new int[5];
-        data.name = new string [5];
+        data.name = new string[5];
         name = inputField.text;
 
-        nameList.Add(name);
-        pointList.Add(points);
+        //nameList.Add(name);
+        //pointList.Add(points);
 
-        for (int i=0;i<data.points.Length;i++)
+  
+        for (int i = 0; i < data.points.Length; i++)
         {
-          
-                data.points[i] = points;
-                data.name[i] = name;
-            
-         }
-                
+         
+            data.points[i] = points;
+            data.name[i] = name;
+
+        }
+      
         bf.Serialize(file, data);
         file.Close();
 
-
-        menuScreen.SetActive(true);
-        FinishScreen.transform.DOScale(0, 0);
-        gameScreen.SetActive(false);
-        timer.timer = 10;
-        timer.stopTimer = false;
-        question.numerosJaSorteados.Clear();
-        question.SortNumber();
-        points = 0;
-
-        Load();
 
     }
 
@@ -128,20 +119,27 @@ public class GameManager : MonoBehaviour
         FileStream file = File.Open(filePath, FileMode.Open);
         PlayerData data = (PlayerData)bf.Deserialize(file);
         file.Close();
-
-      
-
-
-        for(int i=0;i< 5; i++)
-        {
-          
-            ResultsTXT[i].text = data.points[i].ToString();
-            NamesTXT[i].text = data.name[i];
            
-        }
-        
-
+         NamesTXT[0].text = data.name[0];
+         ResultsTXT[0].text = data.points[0].ToString();
+          
     }
 
+
+    public void ReturnMenu()
+    {
+        Save();
+        Load();
+        points = 0;
+        FinishScreen.transform.DOScale(0, 0);
+        menuScreen.SetActive(true);
+        gameScreen.SetActive(false);
+        timer.timer = 10;
+        timer.stopTimer = false;
+        question.numerosJaSorteados.Clear();
+        question.SortNumber();
+       
+        
+    }
 
 }

@@ -12,6 +12,7 @@ public class ButtonsMenu : MonoBehaviour, IPointerDownHandler
     [SerializeField] private GameObject menu;
     [SerializeField] private GameObject Game;
     [SerializeField] private GameObject Score;
+   
     public bool type1;
     public bool type2;
 
@@ -28,7 +29,7 @@ public class ButtonsMenu : MonoBehaviour, IPointerDownHandler
         menu.SetActive(true);
         Game.SetActive(false);
         Score.SetActive(false);
-
+       
     }
 
 
@@ -40,7 +41,9 @@ public class ButtonsMenu : MonoBehaviour, IPointerDownHandler
         {
             menu.SetActive(false);
             Game.SetActive(true);
+           
             pressing = false;
+            
         }
         if (pressing && type2)
         {

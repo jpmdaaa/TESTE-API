@@ -194,12 +194,7 @@ public class QuestionsManager : MonoBehaviour
 
             }
         }
-        else
-        {
-            GM.FinishGame();
-            
-        }
-       
+        
         
         valorSorteado = randomNumber;
     }

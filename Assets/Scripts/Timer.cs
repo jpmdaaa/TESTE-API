@@ -13,15 +13,14 @@ public class Timer : MonoBehaviour
     public Text texTimer;
     private QuestionsManager question;
     public bool stopTimer;
-  
-
+   
 
     void Start()
     {
         timer = 10;
         question = (QuestionsManager) FindObjectOfType(typeof(QuestionsManager));
         GM = (GameManager)FindObjectOfType(typeof(GameManager));
-      
+       
         stopTimer = false;
     }
 
@@ -37,19 +36,9 @@ public class Timer : MonoBehaviour
         }
         else if (timer<=0)
         {
-            if(question.Awnser == question.corretAwnser)
-            {
-                GM.points += 1;
-                timer = 10;
-                question.SortNumber();
-              
-            }
-            else
-            {
+                
                 GM.FinishGame();
-            }
-
-
+           
         }
 
         if (timer < 5 && timer>0)

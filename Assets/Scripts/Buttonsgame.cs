@@ -27,7 +27,7 @@ public class Buttonsgame : MonoBehaviour
 
     void Update()
     {
-      
+    
     }
 
     public void Next()
@@ -49,7 +49,13 @@ public class Buttonsgame : MonoBehaviour
         }
         else
             Surrender();
-            //audioManager.PlaySoundLose();
+
+
+        if(GM.points==6)
+        {
+            GM.FinishGame();
+        }
+          
 
 
     }
@@ -59,5 +65,8 @@ public class Buttonsgame : MonoBehaviour
         audioManager.PlaySoundLose();
         GM.FinishGame();
     }
+
+
+   
 
 }
